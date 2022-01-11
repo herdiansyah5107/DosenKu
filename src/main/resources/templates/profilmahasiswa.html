@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>"
+   
+        <title>Profil Mahasiswa</title>
+        
+        <link rel = "stylesheet" href="assets/css/index.css">
+    </head>
+    <body>
+    <div id ="id">
+    <h1 class="Color1"> Profil Mahasiswa </h1> 
+    <table class="table">
+    <tr class="thead">  
+        <td scope ="col">Name</td>    
+        <td scope ="col">Date of Brite</td>       
+        <td scope ="col">Gender</td>
+        <td scope ="col">School Origin</td>  
+     
+    </tr>
+        <tr th:each= pom:${data}>
+		<td th:text = ${pom.name}></td>
+        <td th:text = ${pom.birthday}></td>
+        <td th:text = ${pom.jenis_kelamin}></td>
+        <td th:text = ${pom.asal_sekolah}></td>
+    </tr>
+ 
+        
+    </body>
+    </table>
+
+
+
+
+
+</body>
+
+
+
+
+</html>

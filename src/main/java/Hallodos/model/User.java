@@ -22,5 +22,4 @@ public class User {
 	private String type_user;
 	private String user_name;
 	private String email;
-
 }
