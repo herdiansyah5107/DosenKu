@@ -10,32 +10,39 @@
     <body>
     <div id ="id">
     <h1 class="Color1"> Profil Mahasiswa </h1> 
+
+	<form th:action="@{/mahasiswa/save}"
+    th:object="${fotoUser}" method="post"
+    enctype="multipart/form-data">
+    <div>
+    <label>Photos: </label>
+    <input type="file" value="upload Files" name="image" accept="image/png, image/jpeg" />
+    </div>
+	<button type="upload" class="btn btn-primary">Upload</button>
+	</form>
+	  </tr>
+
+      
+	
     <table class="table">
+<img alt="Image" th:src="@{image/profilMahasiswa}" width="250" height="250"/>
     <tr class="thead">  
-        <td scope ="col">Name</td>    
+        <td scope ="col">Name</td> 
         <td scope ="col">Date of Brite</td>       
         <td scope ="col">Gender</td>
         <td scope ="col">School Origin</td>  
-     
+ 			<td scope ="col">Photos</td>  
     </tr>
-        <tr th:each= pom:${data}>
-		<td th:text = ${pom.name}></td>
-        <td th:text = ${pom.birthday}></td>
-        <td th:text = ${pom.jenis_kelamin}></td>
-        <td th:text = ${pom.asal_sekolah}></td>
-    </tr>
- 
-        
+        <tr th:each= profil:${data}>
+		<td th:text = ${profil.name}></td>
+        <td th:text = ${profil.birthday}></td>
+        <td th:text = ${profil.jenis_kelamin}></td>
+        <td th:text = ${profil.asal_sekolah}></td>
+		<td th:text = ${profil.photos}></td>
+    </tr>   
     </body>
     </table>
 
-
-
-
-
 </body>
 
-
-
-
-</html>
+</html >

@@ -21,5 +21,8 @@ public class User {
 	private long id;
 	private String type_user;
 	private String user_name;
-	private String email;
+	public void setPhotos(String fileName) {
+		// TODO Auto-generated method stub
+		
+	}
 }
