@@ -32,4 +32,7 @@ public class Mahasiswa {
 	@Column(name = "mahasiswa")
 	private String mahasiswa;
 
+	private String photos;
+
+	
 }

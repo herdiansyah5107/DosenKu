@@ -1,6 +1,7 @@
 package Hallodos.model.entities;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +11,6 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,14 +20,12 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-<<<<<<< HEAD:src/main/java/Hallodos/model/User.java
+
 	private String type_user;
 	private String user_name;
 	public void setPhotos(String fileName) {
-		// TODO Auto-generated method stub
 		
 	}
-=======
 
 	@Column(name = "username")
 	private String username;
@@ -37,5 +35,4 @@ public class User {
 
 	@Column(name = "password")
 	private String password;
->>>>>>> bd2c2d778b76088382295b08f4c5de851a52fff2:src/main/java/Hallodos/model/entities/User.java
 }

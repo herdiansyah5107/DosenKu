@@ -3,7 +3,6 @@ package Hallodos.config;
 import java.io.*;
 import java.nio.file.*;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.multipart.MultipartFile;
  
 public class FileUploadUtil {
