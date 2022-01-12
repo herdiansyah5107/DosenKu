@@ -15,13 +15,20 @@ import org.springframework.web.servlet.view.RedirectView;
 
 
 import Hallodos.config.FileUploadUtil;
+import Hallodos.model.repository.MahasiswaRepository;
 
 
 @Controller
 public class UserController {
 	
 	@Autowired
-	Hallodos.model.repository.MahasiswaRepository mahasiswaRepo;
+	MahasiswaRepository mahasiswaRepo;
+	// untuk dasboard
+	@GetMapping("/dasboard")
+	public String getdasboard() {
+	return "index";
+		}
+	
 	
 	//get untuk memunculkan profil mahasiswa
 	@GetMapping("/profilMahasiswa")
